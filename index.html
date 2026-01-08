@@ -23,111 +23,159 @@
     }
 
     a {
-      color: #6366f1;
+      color: #4f46e5;
       text-decoration: none;
       font-weight: 500;
     }
 
+    /* HERO */
     header {
-      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
       color: white;
-      padding: 100px 20px;
+      padding: 140px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     header p {
-      font-size: 20px;
+      font-size: 22px;
       opacity: 0.95;
+    }
+
+    header .tagline {
+      margin-top: 25px;
+      font-size: 16px;
+      opacity: 0.85;
     }
 
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
+      font-size: 34px;
+      margin-bottom: 40px;
       text-align: center;
     }
 
+    /* ABOUT */
     .about {
-      max-width: 800px;
+      background: white;
+      padding: 45px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      max-width: 850px;
       margin: auto;
       text-align: center;
       font-size: 18px;
       color: #333;
     }
 
+    /* SKILLS */
     .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      margin-top: 30px;
+      gap: 14px;
+      margin-top: 20px;
     }
 
     .skills span {
       background: white;
-      padding: 12px 18px;
+      padding: 14px 22px;
       border-radius: 999px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
       font-size: 14px;
       font-weight: 500;
+      transition: transform 0.2s ease;
     }
 
+    .skills span:hover {
+      transform: translateY(-4px);
+    }
+
+    /* PROJECTS */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 35px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
       transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
     }
 
     .card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      margin-bottom: 15px;
+      font-size: 22px;
     }
 
     .card p {
       color: #555;
       font-size: 15px;
+      margin-bottom: 20px;
     }
 
+    .card a {
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
     .contact {
+      background: white;
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: auto;
       text-align: center;
       font-size: 18px;
     }
 
+    .contact p {
+      margin-bottom: 15px;
+    }
+
+    /* FOOTER */
     footer {
       background: #111;
       color: white;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
+      padding: 50px 20px;
+      margin-top: 80px;
     }
 
     footer p {
       opacity: 0.8;
       font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 38px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -137,16 +185,17 @@
   <header>
     <h1>Muneeb Iftikhar</h1>
     <p>Creative Web Developer & Graphic Designer</p>
+    <p class="tagline">Building modern, user-focused digital experiences</p>
   </header>
 
   <!-- ABOUT -->
   <section>
     <h2>About Me</h2>
-    <p class="about">
+    <div class="about">
       I am a Computer Science student with a strong passion for web development and graphic design.
-      I enjoy creating modern, responsive, and visually appealing digital experiences by combining
-      clean code with strong design principles.
-    </p>
+      I specialize in creating modern, responsive, and visually appealing digital experiences by
+      combining clean code with strong design principles.
+    </div>
   </section>
 
   <!-- SKILLS -->
@@ -162,6 +211,7 @@
       <span>Adobe Photoshop</span>
       <span>Adobe Illustrator</span>
       <span>Figma</span>
+      <span>Git (Basic)</span>
     </div>
   </section>
 
@@ -169,20 +219,36 @@
   <section>
     <h2>Projects</h2>
     <div class="projects">
+
       <div class="card">
         <h3>Personal Portfolio Website</h3>
-        <p>Designed and developed a modern portfolio website to showcase my creative and technical skills.</p>
+        <p>
+          A modern portfolio website built to showcase my web development and design skills using
+          clean layouts, responsive design, and modern UI principles.
+        </p>
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
       </div>
 
       <div class="card">
         <h3>Creative Landing Page</h3>
-        <p>Built a responsive landing page focused on typography, layout, and user experience.</p>
+        <p>
+          Designed and developed a high-converting landing page focused on typography,
+          layout structure, and user experience.
+        </p>
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
       </div>
 
       <div class="card">
         <h3>Brand Identity Concept</h3>
-        <p>Created logos, color palettes, and social media visuals for a sample brand.</p>
+        <p>
+          Created logo concepts, color palettes, typography, and social media visuals for a
+          sample brand identity project.
+        </p>
+        <a href="#">View Design</a>
       </div>
+
     </div>
   </section>
 
@@ -190,7 +256,7 @@
   <section>
     <h2>Contact</h2>
     <div class="contact">
-      <p>Email: your.email@example.com</p>
+      <p><strong>Email:</strong> your.email@example.com</p>
       <p>
         <a href="#">LinkedIn</a> • 
         <a href="#">GitHub</a>
@@ -200,9 +266,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Muneeb Iftikhar • Built with passion</p>
+    <p>© 2026 Muneeb Iftikhar • Designed & Built by Me</p>
   </footer>
 
 </body>
 </html>
-
