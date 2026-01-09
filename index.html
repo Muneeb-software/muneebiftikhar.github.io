@@ -23,8 +23,8 @@ body.dark {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
+  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
@@ -35,7 +35,7 @@ a { color: var(--accent); text-decoration: none; }
 header {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white;
-  padding: 140px 20px;
+  padding: 130px 20px;
 }
 
 .hero {
@@ -48,10 +48,11 @@ header {
 }
 
 .hero img {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   border: 4px solid white;
+  object-fit: cover;
 }
 
 .hero h1 { font-size: 50px; }
@@ -61,8 +62,8 @@ header {
   padding: 12px 22px;
   border-radius: 30px;
   margin-right: 10px;
-  color: #4f46e5;
   font-weight: 600;
+  color: #4f46e5;
 }
 
 .toggle {
@@ -82,7 +83,11 @@ section {
   padding: 90px 20px;
 }
 
-h2 { text-align: center; font-size: 34px; margin-bottom: 40px; }
+h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
 
 .card {
   background: var(--card);
@@ -90,8 +95,6 @@ h2 { text-align: center; font-size: 34px; margin-bottom: 40px; }
   border-radius: 20px;
   box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
-
-.about { max-width: 800px; margin: auto; text-align: center; }
 
 .skills, .projects {
   display: grid;
@@ -106,8 +109,6 @@ h2 { text-align: center; font-size: 34px; margin-bottom: 40px; }
   border-radius: 14px;
 }
 
-.project-content { margin-top: 15px; }
-
 .contact {
   background: #111;
   color: white;
@@ -115,9 +116,13 @@ h2 { text-align: center; font-size: 34px; margin-bottom: 40px; }
   padding: 70px 20px;
 }
 
-footer { text-align: center; padding: 20px; opacity: 0.7; }
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
 
-/* ANIMATIONS */
+/* Animations */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -132,17 +137,17 @@ footer { text-align: center; padding: 20px; opacity: 0.7; }
 
 <body>
 
-<div class="toggle" onclick="toggleDark()">🌙 Dark</div>
+<div class="toggle" onclick="toggleDark()">🌙</div>
 
 <header>
   <div class="hero">
-    <img src="images/profile.jpg">
+    <img src="images/profile.jpg" alt="Muneeb Iftikhar">
     <div>
       <h1>Muneeb Iftikhar</h1>
-      <p>Web Developer • Graphic Designer • CS Student</p>
+      <p>Web Developer • Graphic Designer • Computer Science Student</p>
       <div class="buttons">
-        <a href="#projects">Projects</a>
-        <a href="#">Download CV</a>
+        <a href="#projects">View Projects</a>
+        <a href="Muneeb_Iftikhar.pdf" target="_blank">Download CV</a>
       </div>
     </div>
   </div>
@@ -150,9 +155,9 @@ footer { text-align: center; padding: 20px; opacity: 0.7; }
 
 <section class="reveal">
 <h2>About Me</h2>
-<div class="card about">
-Computer Science student with experience in frontend development, UI/UX design,
-PHP & MySQL databases. Passionate about building modern, real-world web solutions.
+<div class="card">
+Detail-oriented Web Developer & Graphic Designer with experience in frontend development,
+UI/UX design, and database-driven applications using PHP and MySQL (phpMyAdmin).
 </div>
 </section>
 
@@ -170,31 +175,24 @@ PHP & MySQL databases. Passionate about building modern, real-world web solution
 <h2>Projects</h2>
 <div class="projects">
 
-<div class="card project">
+<div class="card">
 <img src="images/project1.jpg">
-<div class="project-content">
 <h3>Portfolio Website</h3>
-<p>Modern responsive portfolio.</p>
-<a href="#">Live</a> • <a href="#">GitHub</a>
-</div>
+<p>Professional portfolio built with modern UI.</p>
+<a href="https://muneeb-software.github.io/muneebiftikhar.github.io/">Live</a> |
+<a href="https://github.com/Muneeb-software">GitHub</a>
 </div>
 
-<div class="card project">
+<div class="card">
 <img src="images/project2.jpg">
-<div class="project-content">
 <h3>Landing Page</h3>
 <p>High-conversion UI landing page.</p>
-<a href="#">Live</a>
-</div>
 </div>
 
-<div class="card project">
+<div class="card">
 <img src="images/project3.jpg">
-<div class="project-content">
-<h3>Brand Identity</h3>
-<p>Logos & brand systems.</p>
-<a href="#">View</a>
-</div>
+<h3>Brand Identity Design</h3>
+<p>Logos & visual systems.</p>
 </div>
 
 </div>
@@ -202,14 +200,16 @@ PHP & MySQL databases. Passionate about building modern, real-world web solution
 
 <div class="contact">
 <h2>Contact</h2>
-<p>Email: your.email@example.com</p>
+<p>Email: <a href="mailto:muneebkeyani123@gmail.com">muneebkeyani123@gmail.com</a></p>
 <p>
-<a href="https://linkedin.com/in/yourusername">LinkedIn</a> |
+<a href="https://linkedin.com/in/muneeb-iftikhar-cs">LinkedIn</a> |
 <a href="https://github.com/Muneeb-software">GitHub</a>
 </p>
 </div>
 
-<footer>© 2026 Muneeb Iftikhar</footer>
+<footer>
+© 2026 Muneeb Iftikhar
+</footer>
 
 <script>
 function toggleDark() {
