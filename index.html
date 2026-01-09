@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muneeb Iftikhar | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muneeb Iftikhar | Web Developer & Graphic Designer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -27,15 +27,33 @@ body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
-a { color: var(--accent); text-decoration: none; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
 
+/* DARK MODE BUTTON */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* HERO */
 header {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white;
-  padding: 130px 20px;
+  padding: 140px 20px;
 }
 
 .hero {
@@ -55,28 +73,28 @@ header {
   object-fit: cover;
 }
 
-.hero h1 { font-size: 50px; }
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+}
 
 .buttons a {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 15px;
+  padding: 12px 24px;
+  border-radius: 30px;
   background: white;
-  padding: 12px 22px;
-  border-radius: 30px;
-  margin-right: 10px;
-  font-weight: 600;
   color: #4f46e5;
+  font-weight: 600;
 }
 
-.toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: var(--card);
-  padding: 10px 15px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
+/* SECTIONS */
 section {
   max-width: 1100px;
   margin: auto;
@@ -96,9 +114,24 @@ h2 {
   box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
-.skills, .projects {
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 30px;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 30px;
 }
 
@@ -107,8 +140,10 @@ h2 {
   height: 180px;
   object-fit: cover;
   border-radius: 14px;
+  margin-bottom: 15px;
 }
 
+/* CONTACT */
 .contact {
   background: #111;
   color: white;
@@ -116,18 +151,24 @@ h2 {
   padding: 70px 20px;
 }
 
+.contact a {
+  color: #a5b4fc;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.7;
 }
 
-/* Animations */
+/* ANIMATIONS */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: 0.8s ease;
 }
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -147,7 +188,7 @@ footer {
       <p>Web Developer • Graphic Designer • Computer Science Student</p>
       <div class="buttons">
         <a href="#projects">View Projects</a>
-        <a href="Muneeb_Iftikhar.pdf" target="_blank">Download CV</a>
+        <a href="muneeb_iftikhar_cv.pdf" target="_blank">Download CV</a>
       </div>
     </div>
   </div>
@@ -155,9 +196,9 @@ footer {
 
 <section class="reveal">
 <h2>About Me</h2>
-<div class="card">
-Detail-oriented Web Developer & Graphic Designer with experience in frontend development,
-UI/UX design, and database-driven applications using PHP and MySQL (phpMyAdmin).
+<div class="card about">
+Computer Science student with strong skills in web development, UI/UX design,
+graphic design, and database-driven applications using PHP, MySQL, and phpMyAdmin.
 </div>
 </section>
 
@@ -167,7 +208,7 @@ UI/UX design, and database-driven applications using PHP and MySQL (phpMyAdmin).
 <div class="card">HTML, CSS, JavaScript</div>
 <div class="card">UI/UX & Graphic Design</div>
 <div class="card">PHP, MySQL, phpMyAdmin</div>
-<div class="card">GitHub & Deployment</div>
+<div class="card">GitHub, Deployment, Version Control</div>
 </div>
 </section>
 
@@ -176,23 +217,23 @@ UI/UX design, and database-driven applications using PHP and MySQL (phpMyAdmin).
 <div class="projects">
 
 <div class="card">
-<img src="images/project1.jpg">
+<img src="images/project1.jpg" alt="Portfolio Website">
 <h3>Portfolio Website</h3>
-<p>Professional portfolio built with modern UI.</p>
+<p>Modern responsive portfolio built with clean UI.</p>
 <a href="https://muneeb-software.github.io/muneebiftikhar.github.io/">Live</a> |
 <a href="https://github.com/Muneeb-software">GitHub</a>
 </div>
 
 <div class="card">
-<img src="images/project2.jpg">
+<img src="images/project2.jpg" alt="Landing Page">
 <h3>Landing Page</h3>
-<p>High-conversion UI landing page.</p>
+<p>High-conversion landing page focused on UX.</p>
 </div>
 
 <div class="card">
-<img src="images/project3.jpg">
+<img src="images/project3.jpg" alt="Brand Design">
 <h3>Brand Identity Design</h3>
-<p>Logos & visual systems.</p>
+<p>Logos & visual identity systems.</p>
 </div>
 
 </div>
@@ -202,8 +243,8 @@ UI/UX design, and database-driven applications using PHP and MySQL (phpMyAdmin).
 <h2>Contact</h2>
 <p>Email: <a href="mailto:muneebkeyani123@gmail.com">muneebkeyani123@gmail.com</a></p>
 <p>
-<a href="https://linkedin.com/in/muneeb-iftikhar-cs">LinkedIn</a> |
-<a href="https://github.com/Muneeb-software">GitHub</a>
+<a href="https://github.com/Muneeb-software">GitHub</a> |
+<a href="https://linkedin.com">LinkedIn</a>
 </p>
 </div>
 
@@ -218,9 +259,9 @@ function toggleDark() {
 
 const reveals = document.querySelectorAll('.reveal');
 window.addEventListener('scroll', () => {
-  reveals.forEach(r => {
-    if (r.getBoundingClientRect().top < window.innerHeight - 100) {
-      r.classList.add('active');
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('active');
     }
   });
 });
@@ -228,4 +269,3 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
-
