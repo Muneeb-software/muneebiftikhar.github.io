@@ -36,7 +36,7 @@ a {
   font-weight: 500;
 }
 
-/* Dark mode toggle */
+
 .toggle {
   position: fixed;
   top: 20px;
@@ -49,7 +49,7 @@ a {
   z-index: 1000;
 }
 
-/* Hero */
+
 header {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white;
@@ -94,7 +94,7 @@ header {
   font-weight: 600;
 }
 
-/* Sections */
+
 section {
   max-width: 1100px;
   margin: auto;
@@ -114,21 +114,21 @@ h2 {
   box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
-/* About */
+
 .about {
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
-/* Skills */
+
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 30px;
 }
 
-/* Projects */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
@@ -140,7 +140,7 @@ h2 {
   line-height: 1.5;
 }
 
-/* Contact */
+
 .contact {
   background: #111;
   color: white;
@@ -152,14 +152,14 @@ h2 {
   color: #a5b4fc;
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.7;
 }
 
-/* Animations */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -177,13 +177,13 @@ footer {
 
 <div class="toggle" onclick="toggleDark()">🌙</div>
 
-<!-- HERO -->
+
 <header>
   <div class="hero">
     <img src="./images/profile.jpg" alt="Muneeb Iftikhar">
     <div>
       <h1>Muneeb Iftikhar</h1>
-      <p>Web Developer • Graphic Designer • Computer Science Student</p>
+      <p>Web Developer • Graphic Designer • Computer Science Student • PhpmyAdmin & MySQL</p>
       <div class="buttons">
         <a href="#projects">View Projects</a>
         <a href="./cv.pdf" download>Download CV</a>
@@ -192,7 +192,7 @@ footer {
   </div>
 </header>
 
-<!-- ABOUT -->
+
 <section class="reveal">
   <h2>About Me</h2>
   <div class="card about">
@@ -202,7 +202,7 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS -->
+
 <section class="reveal">
   <h2>Skills</h2>
   <div class="skills">
@@ -213,13 +213,13 @@ footer {
   </div>
 </section>
 
-<!-- PROJECTS -->
+
 <section id="projects" class="reveal">
   <h2>Projects</h2>
 
   <div class="projects">
 
-    <!-- FOOD GORILA PROJECT (ADDED) -->
+    
     <div class="card project">
       <h3>Food Gorila – Online Food Ordering System</h3>
       <p>
@@ -238,16 +238,22 @@ footer {
       </p>
     </div>
 
-    <!-- EXISTING PROJECTS (UNCHANGED) -->
+    
     <div class="card project">
-      <h3>Student Management System (PHP & MySQL)</h3>
-      <p>
-        Database driven web application developed using PHP and MySQL.
-        Includes full CRUD operations for managing student records
-        through phpMyAdmin.
-      </p>
-      <p><strong>Technologies:</strong> PHP, MySQL, phpMyAdmin</p>
-    </div>
+  <h3>Student Management System (PHP & MySQL)</h3>
+  <p>
+    Database driven web application developed using PHP and MySQL.
+    Includes full CRUD operations for managing student records
+    through phpMyAdmin.
+  </p>
+  <p><strong>Technologies:</strong> PHP, MySQL, phpMyAdmin</p>
+  <p>
+    <a href="Student-Management-System-Documentation.pdf" target="_blank">
+      View Project Documentation
+    </a>
+  </p>
+</div>
+
     
     <div class="card project">
   <h3>UI/UX Dashboard Design</h3>
@@ -265,7 +271,7 @@ footer {
 
 </section>
 
-<!-- CONTACT -->
+
 <div class="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:muneebkeyani123@gmail.com">muneebkeyani123@gmail.com</a></p>
